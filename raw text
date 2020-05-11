@@ -1,0 +1,130 @@
+  
+@ECHO OFF
+mode con: lines=68
+ECHO Ping To Google,Steamcommunity,SE Asia/Singapore and East India CSGO Servers v1.0 by god4ather - May 11.2020
+Echo Presented To You By "Screaming Eagle" 
+ECHO ============================================================= 
+ECHO -AUTO PING MODE is (ENABLED)- Please wait while first pings are loading...
+:top
+color 07
+TITLE Ping To Google,Steamcommunity,SE Asia/Singapore and East India CSGO Servers v1.0 by god4ather - May 11.2020    (AUTO PING MODE)
+:pads
+CALL:pingtest1 172.217.163.206
+CALL:pingtest2 104.110.72.183
+CALL:pingtest3 103.28.54.100 45.121.185.0
+CALL:pingtest4 103.28.54.16
+CALL:pingtest5 103.10.124.1
+CALL:pingtest6 172.105.47.143 45.117.204.250
+CALL:pingtest7 182.16.157.22
+CALL:pingtest8 182.16.157.22
+CALL:pingtest9 151.80.111.130
+CLS
+ECHO Ping To Google,Steamcommunity,SE Asia/Singapore and East India CSGO Servers v1.0 by god4ather - May 11.2020  
+ECHO ============================================================= 
+ECHO.[www.google.com]
+ECHO - www.google.com (172.217.163.206):		        (%ms1%)
+ECHO.[Steamcommunity.com]
+ECHO - www.steamcommunity.com (104.110.72.183):		        (%ms2%)
+ECHO.
+ECHO.[SE Asia/Singapore mm]
+ECHO - Singapore server,sgp (103.28.54.100) :			(%ms3%)
+ECHO - Singapore server,sgp (45.121.185.0) :			(%ms4%)
+ECHO.
+ECHO.[Offcial SGP 1]
+ECHO - Singapore official valve,sgp-1.valve.net ( 103.28.54.16):		(%ms5%)
+ECHO.
+ECHO.[Official SGP 2]
+ECHO - Singapore officia valvel,sgp-2.valve.net(103.10.124.1):	        (%ms6%)
+ECHO.
+ECHO.[INDIA Kebab Nation FFA DM,Indinet]
+ECHO - India,kebab nation (172.105.47.143)               	        (%ms7%)
+ECHO - India,Indi net (45.117.204.250)               	        (%ms8%)
+ECHO.
+ECHO.[Screaming Eagle Retake Server]
+ECHO - Screaming Eagle,BD (182.16.157.22)               	        (%ms9%)
+ECHO.
+ECHO.[Screaming Eagle prac/TVT]
+ECHO - Screaming Eagle,BD (182.16.157.22)               	        (%ms10%)
+ECHO.
+ECHO.[Europe server]
+ECHO - EU (151.80.111.130)               	        (%ms11%)
+ECHO ============================================================= 
+ECHO -AUTO PING MODE is (ENABLED)- The pings will automatically keep refreshing.
+GOTO top
+ 
+:pingtest1
+ECHO.
+SET ms1=ERROR
+ECHO + Pinging (Google)
+FOR /F "tokens=4 delims==" %%i IN ('ping.exe -n 1 %1 ^| FIND "ms"') DO SET ms1=%%i
+
+GOTO:EOF
+
+:pingtest2
+ECHO.
+SET ms2=ERROR
+ECHO + Pinging (Steamcommunity)
+FOR /F "tokens=4 delims==" %%i IN ('ping.exe -n 1 %1 ^| FIND "ms"') DO SET ms2=%%i
+GOTO:EOF
+
+:pingtest3
+ECHO.
+SET ms3=ERROR
+SET ms4=ERROR
+ECHO + Pinging (SE Asia/Singapore)
+FOR /F "tokens=4 delims==" %%i IN ('ping.exe -n 1 %1 ^| FIND "ms"') DO SET ms3=%%i
+ECHO + Pinging (SE Asia/Singapore)
+FOR /F "tokens=4 delims==" %%i IN ('ping.exe -n 1 %2 ^| FIND "ms"') DO SET ms4=%%i
+GOTO:EOF
+
+:pingtest4
+ECHO.
+SET ms5=ERROR
+ECHO + Pinging (Offcial SGP 1)
+FOR /F "tokens=4 delims==" %%i IN ('ping.exe -n 1 %1 ^| FIND "ms"') DO SET ms5=%%i
+GOTO:EOF
+
+
+:pingtest5
+ECHO.
+SET ms6=ERROR
+ECHO + Pinging (Official SGP 2)
+FOR /F "tokens=4 delims==" %%i IN ('ping.exe -n 1 %1 ^| FIND "ms"') DO SET ms6=%%i
+GOTO:EOF
+
+
+:pingtest6
+ECHO.
+SET ms7=ERROR
+SET ms8=ERROR
+ECHO + Pinging (kebab nation)
+FOR /F "tokens=4 delims==" %%i IN ('ping.exe -n 1 %1 ^| FIND "ms"') DO SET ms7=%%i
+ECHO + Pinging (Indi net)
+FOR /F "tokens=4 delims==" %%i IN ('ping.exe -n 1 %1 ^| FIND "ms"') DO SET ms8=%%i
+GOTO:EOF
+
+
+:pingtest7
+ECHO.
+SET ms9=ERROR
+ECHO + Pinging (Screaming Eagle Retake Server)
+FOR /F "tokens=4 delims==" %%i IN ('ping.exe -n 1 %1 ^| FIND "ms"') DO SET ms9=%%i
+
+GOTO:EOF
+
+
+:pingtest8
+ECHO.
+SET ms10=ERROR
+ECHO + Pinging (Screaming Eagle prac/TVT)
+FOR /F "tokens=4 delims==" %%i IN ('ping.exe -n 1 %1 ^| FIND "ms"') DO SET ms10=%%i
+
+GOTO:EOF
+
+:pingtest9
+ECHO.
+SET ms11=ERROR
+ECHO + Pinging (Europe server)
+FOR /F "tokens=4 delims==" %%i IN ('ping.exe -n 1 %1 ^| FIND "ms"') DO SET ms11=%%i
+
+GOTO:EOF
